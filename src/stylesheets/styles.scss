@@ -1,2 +1,18 @@
+$family-primary: 'Crimson Text';
+
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
 @import 'bulma.css';
+
+html {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+body {
+  height: 100vh;
+}
+
+.is-family-primary {
+  font-family: $family-primary;
+}
