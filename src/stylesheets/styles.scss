@@ -1,18 +1,22 @@
-$family-primary: 'Crimson Text';
+$family-primary: 'Lora';
+$family-secondary: 'Merriweather';
 
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
-@import 'bulma.css';
+@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
 html {
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  background-repeat: no-repeat;
-  margin: 0 auto;
+  height: 100%;
 }
 
-body {
-  height: 100vh;
-}
-
-.is-family-primary {
+.primary-font {
   font-family: $family-primary;
+}
+
+.body-font {
+  font-family: $family-secondary;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
 }
