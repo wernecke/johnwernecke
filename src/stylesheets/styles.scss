@@ -1,22 +1,62 @@
-$family-primary: 'Lora';
-$family-secondary: 'Merriweather';
-
-@import url('https://fonts.googleapis.com/css?family=Lora');
-@import url('https://fonts.googleapis.com/css?family=Merriweather');
-
-html {
-  height: 100%;
+:root {
+  --font-size: calc(18px + 0.25vw);
 }
 
-.primary-font {
-  font-family: $family-primary;
+body {
+  font-size: var(--font-size);
 }
 
-.body-font {
-  font-family: $family-secondary;
+.name {
+  grid-area: name;
+  align-self: center;
+  padding: 10px 20px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
+.name h1 a {
+  color: #58cba6;
+}
+.poster { grid-area: poster; }
+
+.footer {
+  grid-area: footer;
+  align-self: end;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.poster img {
+  max-height: 70vh;
+  justify-content: center;
+  filter: drop-shadow(-5px 5px 4px #000);
+}
+
+.grid-container {
+  display: grid;
+  max-width: 55em;
+  margin: 5% auto 2%;
+  grid-auto-rows: minmax(100px auto);
+  grid-template-columns: repeat(9, 1fr);
+  grid-column-gap: 2.5%;
+  grid-template-areas:
+    "name name name name name poster poster poster poster"
+    ". . . footer footer footer . . .";
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-areas:
+    ". name ."
+      ". poster. ";
+  }
+
+  .poster { 
+  align-self: center;
+  margin: 1% auto 5%;
+  } 
+  .poster img {
+    max-width: 20em;
+    min-height: 60vh;
+  }
 }
