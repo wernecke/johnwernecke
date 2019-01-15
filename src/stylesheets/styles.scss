@@ -1,7 +1,7 @@
 $black: #000;
 
 :root {
-  --font-size: calc(18px + 0.25vw);
+  --font-size: calc(1em);
 }
 
 body {
@@ -50,6 +50,10 @@ body {
       ". name ."
       ". poster. ";
     grid-template-columns: 20px 1fr 20px;
+  }
+
+  .name {
+    padding: 0;
   }
 
   .poster {
