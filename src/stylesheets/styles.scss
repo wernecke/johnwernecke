@@ -1,3 +1,5 @@
+$black: #000;
+
 :root {
   --font-size: calc(18px + 0.25vw);
 }
@@ -7,56 +9,56 @@ body {
 }
 
 .name {
-  grid-area: name;
   align-self: center;
+  grid-area: name;
   padding: 10px 20px;
 }
 
-.name h1 a {
-  color: #58cba6;
+.poster {
+  grid-area: poster;
+
+  img {
+    filter: drop-shadow(-5px 5px 4px $black);
+    justify-content: center;
+    max-height: 70vh;
+  }
 }
-.poster { grid-area: poster; }
 
 .footer {
-  grid-area: footer;
   align-self: end;
+  grid-area: footer;
   justify-content: center;
   margin-top: 2%;
 }
 
-.poster img {
-  max-height: 70vh;
-  justify-content: center;
-  filter: drop-shadow(-5px 5px 4px #000);
-}
-
 .grid-container {
   display: grid;
-  max-width: 55em;
-  margin: 5% auto 2%;
   grid-auto-rows: minmax(100px auto);
-  grid-template-columns: repeat(9, 1fr);
   grid-column-gap: 2.5%;
   grid-template-areas:
     "name name name name name poster poster poster poster"
     ". . . footer footer footer . . .";
+  grid-template-columns: repeat(9, 1fr);
+  margin: 5% auto 2%;
+  max-width: 55em;
 }
 
 @media screen and (max-width: 900px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 20px 1fr 20px;
     grid-template-areas:
-    ". name ."
+      ". name ."
       ". poster. ";
+    grid-template-columns: 20px 1fr 20px;
   }
 
-  .poster { 
-  align-self: center;
-  margin: 1% auto 5%;
-  } 
-  .poster img {
-    max-width: 20em;
-    min-height: 60vh;
+  .poster {
+    align-self: center;
+    margin: 1% auto 5%;
+
+    img {
+      max-width: 20em;
+      min-height: 60vh;
+    }
   }
 }
