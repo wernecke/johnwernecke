@@ -1,7 +1,19 @@
 $black: #000;
 
 :root {
-  --font-size: calc(1em);
+  --font-size: calc(1.1em);
+
+  font-family: 'Hermann Regular', sans-serif;
+}
+
+h1 {
+  font-family: 'Hermann Bold', sans-serif;
+  font-size: 3em;
+  line-height: 0;
+}
+
+#mfPreviewBar {
+  display: none;
 }
 
 body {
@@ -34,13 +46,13 @@ body {
 .grid-container {
   display: grid;
   grid-auto-rows: minmax(100px auto);
-  grid-column-gap: 2.5%;
+  grid-column-gap: 3%;
   grid-template-areas:
     "name name name name name poster poster poster poster"
     ". . . footer footer footer . . .";
   grid-template-columns: repeat(9, 1fr);
   margin: 5% auto 2%;
-  max-width: 60em;
+  max-width: 68em;
 }
 
 @media screen and (max-width: 900px) {
@@ -64,5 +76,15 @@ body {
       max-width: 18em;
       min-height: 50vh;
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    line-height: 1em;
+  }
+
+  p {
+    font-size: 1em;
   }
 }
