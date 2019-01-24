@@ -19,7 +19,16 @@ h2 {
 }
 
 a {
-  color: #dde500;
+  color: #00b6c6;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom: 3px dotted;
+  }
+
+  &:focus {
+    border-bottom: 3px dotted;
+  }
 }
 
 #mfPreviewBar {
