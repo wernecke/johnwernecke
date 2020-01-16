@@ -47,10 +47,9 @@ body {
 }
 
 .poster {
-  grid-area: poster;
+  margin: 0 auto;
 
   img {
-    filter: drop-shadow(-5px 5px 4px $black);
     justify-content: center;
     max-height: 70vh;
   }
@@ -65,26 +64,16 @@ body {
 
 .grid-container {
   display: grid;
-  grid-auto-rows: minmax(100px auto);
   grid-column-gap: 3%;
-  grid-template-areas:
-    "name name name name name poster poster poster poster"
-    ". . . footer footer footer . . .";
-  grid-template-columns: repeat(9, 1fr);
   margin: 5% auto 2%;
-  max-width: 68em;
+  max-width: 72em;
 }
 
 @media screen and (max-width: 900px) {
   .grid-container {
-    display: grid;
-    grid-column-gap: 0%;
-    grid-template-areas:
-      ". name ."
-      ". poster. ";
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    padding: 0 1%;
+  grid-column-gap: 3%;
+  margin: 5% auto 2%;
+  max-width: 72em;
   }
 
   .name {
@@ -92,8 +81,7 @@ body {
   }
 
   .poster {
-    align-self: center;
-    margin: 1% auto 5%;
+    margin: 0 auto;
 
     img {
       max-width: 18em;
